@@ -1,0 +1,29 @@
+{
+  "name": "terraform-aws-cognito-auth.web-lambda",
+  "version": "0.0.0",
+  "description": "Serverless AaaS provider built on top of AWS Cognito",
+  "homepage": "https://github.com/squidfunk/terraform-aws-cognito-auth",
+  "bugs": {
+    "url": "https://github.com/squidfunk/terraform-aws-cognito-auth/",
+    "email": "martin.donath@squidfunk.com"
+  },
+  "private": true,
+  "author": {
+    "name": "Martin Donath",
+    "email": "martin.donath@squidfunk.com"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/squidfunk/terraform-aws-cognito-auth.git"
+  },
+  "scripts": {
+    "build": "make build",
+    "clean": "make clean",
+    "lint": "make lint",
+    "test": "make test",
+    "watch": "make watch"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

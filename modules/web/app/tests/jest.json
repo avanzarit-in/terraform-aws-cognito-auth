@@ -1,0 +1,39 @@
+{
+  "rootDir": "../",
+  "modulePaths": [
+    "<rootDir>/src"
+  ],
+  "moduleNameMapper": {
+    "_/(.*)": "<rootDir>/tests/$1"
+  },
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/tests/index.ts"
+  ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "testRegex": "(/tests/suites/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "<rootDir>/tests/tsconfig.json"
+    }
+  },
+  "coveragePathIgnorePatterns": [
+    "tests"
+  ],
+  "coverageReporters": [
+    "html",
+    "lcov",
+    "text"
+  ]
+}

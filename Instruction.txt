@@ -1,0 +1,32 @@
+PREREQUISIT
+===========
+1. set path=%path%;E:\.npm-global
+2. Initialize node 
+	. ~/.nvm/nvm.sh
+3. nvm install node 11.15.0 (If you already have the version then instead of install change it to use)
+4. open file "/projects/terraform-aws-cognito-auth/modules/message/lambda/node_modules/svgexport/node_modules/puppeteer/lib/Launcher.js"
+	navigate to line 197
+	add "args: ['--no-sandbox']" into the options JSON
+        async launch(options = {args: ['--no-sandbox']}) {
+
+TERRAFORM 
+=========
+export AWS_ACCESS_KEY_ID="AKIATHNHEEJ5SUPUZWHR"
+export AWS_SECRET_ACCESS_KEY="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"
+export AWS_DEFAULT_REGION="us-east-1"
+
+
+DOCKER
+======
+docker run -d -it --name devtest -v e:/projects:/projects avanzarit/docker-repo:1.0
+
+
+MJML
+====
+For mjml files if it does not translate to html properly on docker container try doing hte same from windows
+
+1) Install npm package mjml if not available
+	npm install -g mjml
+2) navigate to the folder where mjml file is and run the following 
+	mjml index.mjml --config.minify true --config.validationlevel strict -o index.html
+
